@@ -1,7 +1,7 @@
 # _Your project title_
 
-- _your name_
-- _your email (uoit.net)_
+Matt Chan
+matthew.chan5@uoit.net
 
 ## About the language
 
