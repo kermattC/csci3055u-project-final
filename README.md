@@ -104,6 +104,45 @@ Another open source library is called "Vapor", which is a web framework and serv
 
 # Analysis of the language
 1. There have been claims of Swift being procedural programming and some saying it is functional, but in the end it is known to be procedural. However there are tools that can bring Swift over to the functional programming side, but not to the full "power" of functional programming. 
-2. 
 
+2. When it comes to boilerplate code, Swift has the ability to automate such code to make things more efficient. For example, take a look at this snippet of code, which compares one instance of the Dog struct with another 
 
+struct Dog{
+    let breed: String
+    let age: Int
+}
+// to compare the Dog struc to other parts of code, we can use the Equatable protocol
+extension Dog : Equatable{
+    func ==(lhs: Dog, rhs: Dog) -> Bool {
+        return lhs.breed == rhs.breed && lhs.age == rhs.age
+    } 
+}
+This requires some copy and pasting and when taken to a larger scale, the repetitiveness can result in runtime bugs. 
+This is where Sourcery comes in which takes in source code then applies templates determined by the user and generates Swift code, saving time and space. Sourcery is a binary tool and has 3 components: The Source, which is the path to the folder containing the source files as the input. The Template, the path to the template file and the Output, where the new generated code will be in. Templates are written in Stencil syntax.
+For example, here is a Equatable template written by Or Ron from Medium.com (more details here https://medium.com/@orron)
+
+{% for type in types.structs %}
+extension {{ type.name }} : Equatable {}
+func ==(lhs: {{ type.name }}, rhs: {{ type.name }}) -> Bool
+{
+	{% for var in type.variables %}
+	guard lhs.{{ var.name }} == rhs.{{ var.name }} else { return false }
+	{% endfor %}
+	return true
+}
+
+{% endfor %}
+ 
+
+This will loop through all struts as the input while Stencil copies all contents, but the result does the same thing as the snippet above. Applying it to the Dog struct will result in this:
+
+extension Dog : Equatable {}
+func == (lhs: Car, rhs: Car) -> Bool
+{
+    guard lhs.breed = rhs.breed else {return false}
+    guard lhs.age = rhs.age else {return false}
+    return true}
+}
+As you can see creating templates on Swift can ease up many repetitive tasks and thus saving a lot of time and space. 
+
+3. 
