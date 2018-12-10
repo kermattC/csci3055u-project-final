@@ -145,4 +145,15 @@ func == (lhs: Car, rhs: Car) -> Bool
 }
 As you can see creating templates on Swift can ease up many repetitive tasks and thus saving a lot of time and space. 
 
-3. 
+3. Swift's closure expressions aim to be as optimized as possible, having features such as shorthand argument names and trailing closure syntax. Swift also supports Nested Functions, allowing self-contained blocks of code to be part of a larger function. Part of the standard library contains methods such as the sorted(by:) method, which sorts an array of values with some known type. The method would require a function to be passed as an argument. For example to sort numbers from least to greatest:
+
+func ascending (_s1: int, _s2: int) -> Bool {	// note that the data types are int since this is used for numbers, which is 
+	return s1 < s2				// because the te method and functions need to be the same data type. 
+}
+let numbers = [5, 1, 3, 7, 2]	// here is the array to be sorted
+var result = numbers.sorted(by:ascending)	// call the function and the sorted(by:) closure method 
+						// will output [1,2,3,5,7]
+						
+4. 
+					
+
