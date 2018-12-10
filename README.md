@@ -153,7 +153,9 @@ func ascending (_s1: int, _s2: int) -> Bool {	// note that the data types are in
 let numbers = [5, 1, 3, 7, 2]	// here is the array to be sorted
 var result = numbers.sorted(by:ascending)	// call the function and the sorted(by:) closure method 
 						// will output [1,2,3,5,7]
-						
+Additionally there are also filters which can take an array as a parameter and return a new array that satisfies the predicate. The filter can be declared like this:
+public func filter (_isIncluded: (Element) throws -> Bool) rethrows -> [Element]
+
 4. Swift supports lexical scoping. Here is an example of calculating the square, and will divide by 2 
 func square (x: Double) -> Double {
     let result = x * x
@@ -164,5 +166,14 @@ func square (x: Double) -> Double {
 }
 print(square (x: 5.0))
 
-5. 
+5. As stated before Swift is a procedural programming language but there are tools that can turn Swift to the functional programming side. 
+For example, taking only the even numbers from an array through functional programming:
+let numbers = [23, 52, 10, 6, 99].filter {(numbers) -> Bool in 	// apply the filter via closure 
+	if numbers % 2 == 0 {
+		return true
+	}else{
+		return false
+	}
+}
 
+6. 
