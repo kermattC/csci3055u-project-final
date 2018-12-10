@@ -176,4 +176,7 @@ let numbers = [23, 52, 10, 6, 99].filter {(numbers) -> Bool in 	// apply the fil
 	}
 }
 
-6. 
+6. Swift is a static type language, as all information about classes and functions must be provided once it the program is compiled. 
+
+7. Some of Swift's biggest strengths is its open source compatability, as well as being a safe language since it provides safeguards for the user to prevent errors. As well as being built for performance, it is said to be 2.6 times faster than Objective-C and 8.4 times faster than Python. Although Swift is very new compared to the well-known languages such as Objective-C and Python which came during the 1980's, Swift came out in 2014 and yet is already one of the most popular programming languages. Being a "clean" language, Swift is easy to read and write. Additioanlly Swift is easy to scale so then products that run Swift are guaranteed to be future-proof. Dynamic libraries are included as well to decrease memory footprint and the language is compatible with Objective-C 
+As it was mentioned that Swift is still new, that also stands as one of the cons of the language as there are still many issues that will come up as the language matures. It also has a limited amount of native branches and has poor backward compatibility with the older versions, meaning developers will need to rewrite projects once a new version of Swift is released. There is XCode however to help do most of the changes. With the frequent updates that come to Swift and the lack of backwards compatability, it can be difficult finding the right tools to complete a task. Additionally the Apple IDE and XCode is "slow" on supporting tools for Swift. 
