@@ -1,4 +1,4 @@
-# _Your project title_
+# CSCI3055U-Final-Swift
 
 Matt Chan
 matthew.chan5@uoit.net
@@ -47,14 +47,9 @@ print("5 + 10 [via function call] =" ,addNumbers(arg: foo, arg2: bar))
 
 
 ## About the tools
-
-> _Describe the compiler or interpreter needed_.
 Swift source code is translated into executable machine code by their own compiler, Swift compiler. It also has an additional number of tools at its disposal, such as IDE integration which comes along with syntax colouring, code completion and many more. The Swift compiler's major components include parsing, which generates an Abstract Syntax Tree (AST) without type information. There is also the semantic analysis which transforms the AST from the parser into a fully-type-checked version of the AST. Both the parser and semantic analysis tells the user errors or warning messages with the input source such as grammar errors. The Clang importer maps C or Objective-C APIs to the corresponding Swift APIs and the Swift Intermediate Language (SIL) has 3 components. SIL Generation lowers the AST into a "raw" SIL, SIL guaranteed transformations performs diagnostics which affectst the correctness of the program and SIL optimizations basically optmizes the program. Lastly the LLVM IR Generation continues to optimize the code and finally generates it into machine code. 
 
 ## About the standard library
-
-> _Give some examples of the functions and data structures
-> offered by the standard library_.
 The Swift standard library contains various data types such as the fundamental data types such as Int, String & Double and collections such as Array, Set and Dictionary. 
 
 // Array:
