@@ -78,11 +78,24 @@ print(1, 2, 3 separator:"..") // prints  1..2..3
 print(1, 2, 3 terminator:"") // prints 123
 
 
-It also includes protocols that describe thoes data types algorithms which operate on them, such as Collection and Equatable. The implementation is located in the stdlib/public subdirectory
+It also includes protocols that describe thoes data types algorithms which operate on them, such as Collection and Equatable and OptionSet. The implementation is located in the stdlib/public subdirectory
 // Collection -> printing the first word in a string
 let text = "a b c d"
 if let firstWord = text.firstIndex(of:" "){
-    print(text[..<firstword])
+    print(text[..<firstWord])
+}
+// OptionSet
+let oneOption: rewards = .gold
+let bundle: rewards = [.gold .platinum .diamond]
+let noOptions: []
+
+var bonus = []
+let purchase = 49.50
+if (purchase > 65){
+    bonus.insert(.gold)
+    print("You've earned gold rewards"!)
+}else{
+    print("Add more to upgrade your membership rank!")
 }
 
 
