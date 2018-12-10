@@ -98,10 +98,12 @@ if (purchase > 65){
 
 > _Describe at least one contribution by the open source
 community written in the language._
+One open source library I found interesting is called "Hero", which is a supercharged transition engine designed for iOS. It changes or adds transitioning when selecting different things on the screen. I enjoyed looking at it since it gives me the feeling of "smoothness", which is one thing many customers value when looking into buying a new phone. Hero is still being up to date, as it is currently supporting Swift 4.2. 
+
+Another open source library is called "Vapor", which is a web framework and server for Swift which is designed for both macOS and Ubuntu. This allows users to host their own servers on their computers running either of the operating systems, which can be useful for hosting and allowing users to connect. Just like Hero, Vapor is also being up to date and is still supporting macOS and Ubuntu. 
 
 # Analysis of the language
-
-> _Organize your report according to the project description
-document_.
+1. There have been claims of Swift being procedural programming and some saying it is functional, but in the end it is known to be procedural. However there are tools that can bring Swift over to the functional programming side, but not to the full "power" of functional programming. 
+2. 
 
 
