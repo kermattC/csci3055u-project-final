@@ -154,6 +154,15 @@ let numbers = [5, 1, 3, 7, 2]	// here is the array to be sorted
 var result = numbers.sorted(by:ascending)	// call the function and the sorted(by:) closure method 
 						// will output [1,2,3,5,7]
 						
-4. 
-					
+4. Swift supports lexical scoping. Here is an example of calculating the square, and will divide by 2 
+func square (x: Double) -> Double {
+    let result = x * x
+    func divide () -> Double{
+        return result / 2
+    }
+    return divide() 
+}
+print(square (x: 5.0))
+
+5. 
 
